@@ -4,7 +4,6 @@
 
 // - Crea una función que reciba un número, la función debe imprimir una cuenta atrás desde ese número hasta 0.
 
-/*
 const countDown = number => {
     for (let index = number; index > 0; index--) {
         console.log(index)
@@ -12,12 +11,10 @@ const countDown = number => {
 }
 
 countDown(5)
-*/
-
+console.log('--------------------')
 
 // - Crea una función que reciba un array de 10 números e imprima por consola la suma de todos los valores del array.
 
-/*
 const totalArray = array => {
     let total = 0;
     for (const number of array) {
@@ -27,7 +24,7 @@ const totalArray = array => {
 }
 
 totalArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-*/
+console.log('--------------------')
 
 // - Crea una función que reciba un número e imprima por consola la tabla de multiplicar del número que ha recibido hasta el 10. Para el 4 el resultado debe ser:
 // 4 x 0 = 0
@@ -36,7 +33,6 @@ totalArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 // ...
 // 4 x 10 = 40
 
-/*
 const multiply = number => {
     for (let index = 0; index <= 10; index++) {
         console.log(`${number} x ${index} = ${number * index}`)
@@ -44,7 +40,7 @@ const multiply = number => {
 }
 
 multiply(4)
-*/
+console.log('--------------------')
 
 // - Crea la función inversa para que la tabla de multiplicar salga en orden inverso. Para el 4 el resultado debe ser:
 // 4 x 10 = 40
@@ -53,7 +49,7 @@ multiply(4)
 // 4 x 1 = 4
 // 4 x 0 = 0
 
-/*
+
 const multiplyRev = number => {
     for (let index = 10; index >= 0; index--) {
         console.log(`${number} x ${index} = ${number * index}`)
@@ -61,7 +57,7 @@ const multiplyRev = number => {
 }
 
 multiplyRev(5)
-*/
+console.log('--------------------')
 
 // - Crea una función que reciba un año y tu edad, la función debe imprimir:
 //   - "naciste en el año X"
@@ -70,7 +66,7 @@ multiplyRev(5)
 //   - "En el año X cumpliste 3 años"
 //     ....
 
-/*
+
 const history = (year, age) => {
     console.log(`Naciste en el año ${year - age}.`)
 
@@ -83,13 +79,11 @@ const history = (year, age) => {
     }
 }
 
-history(2023, 15)
-*/
-
+history(2023, 10)
+console.log('--------------------')
 
 // - Crea una función que reciba dos números e imprima todos los números pares desde el primero hasta el segundo. Si recibe 2 y 12 imprimirá 2, 4, 6, 8, 10, 12.
 
-/*
 const evenNumbers = (number1, number2) => {
     for (let index = number1; number2 >= index; index++) {
         if (index % 2 === 0) console.log(index)
@@ -97,12 +91,10 @@ const evenNumbers = (number1, number2) => {
 }
 
 evenNumbers(2, 8)
-*/
-
+console.log('--------------------')
 
 // - Crea una función que genere 2 arrays y los rellene con 5 números aleatorios cada uno, la función debe decir qué valores se han repetido en los dos arrays.
 
-/*
 const createTwoArrays = () => {
     const array1 = []
     const array2 = []
@@ -120,11 +112,10 @@ const createTwoArrays = () => {
 }
 
 createTwoArrays()
-*/
+console.log('--------------------')
 
 // - Crea una función que reciba un número y te diga si es primo o no.
 
-/*
 const primeNumber = number => {
     for (let index = number - 1; index > 1; index--) {
         if ((number % index) === 0) return `El número ${number} no es primo`
@@ -133,13 +124,12 @@ const primeNumber = number => {
 }
 
 console.log(primeNumber(3))
-*/
+console.log('--------------------')
 
 // - Crea una función que reciba un array de 10 números, imprima por consola cada número, su cuadrado y su cubo en este formato:
 //   "Número: 2 - Cuadrado: 4 - Cubo: 8".
 //   Nota: Dentro del objeto Math existe el método pow. Math.pow(número, exponente)
 
-/*
 const power = array => {
     for (const item of array) {
         console.log(`Número ${item} - Cuadrado: ${Math.pow(item, 2)} - Cubo: ${Math.pow(item, 3)}`)
@@ -147,11 +137,10 @@ const power = array => {
 }
 
 power([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-*/
+console.log('--------------------')
 
 // - Crea una función que reciba una palabra e imprima por consola esa palabra pero con las vocales en mayúscula.
 
-/*
 const upperVowels = word => {
     const vowels = ['a', 'e', 'i', 'o', 'u', 'ü', 'á', 'é', 'í', 'ó', 'ú']
     let newWord = ''
@@ -163,12 +152,10 @@ const upperVowels = word => {
 }
 
 upperVowels('cigüeña')
-*/
-
+console.log('--------------------')
 
 // - Crea una función que reciba una frase e imprima el número de veces que se repite cada vocal
 
-/*
 const numVowels = sentence => {
     let aCounter = 0
     let eCounter = 0
@@ -188,30 +175,24 @@ const numVowels = sentence => {
 }
 
 numVowels('sobreesdrújula')
-
-*/
-
-
+console.log('--------------------')
 
 // - Crea una función que reciba dos palabras e intercale las letras de cada una para formar una nueva palabra. Si la función recibe (hola, adios) el resultado será "haodliao", pero si recibe (adios, hola) el resultado será "ahdoiloa"
 
-// const intercalate = (word1, word2) => {
-//     let newWord = '';
-//     for (let index = 0; index < Math.min(word1.length, word2.length); index++) {
-//         newWord += word1.charAt(index);
-//         newWord += word2.charAt(index);
-//     }
-//     return newWord;
-// }
+const intercalate = (word1, word2) => {
+    let newWord = '';
+    for (let index = 0; index < Math.min(word1.length, word2.length); index++) {
+        newWord += word1.charAt(index);
+        newWord += word2.charAt(index);
+    }
+    return newWord;
+}
 
-// console.log(intercalate('hola', 'adiós'))
-
-
-
+console.log(intercalate('hola', 'adiós'))
+console.log('--------------------')
 
 // - Crea una función que reciba una palabra e imprima la misma palabra en orden inverso conservando las mayúsculas y las minúsculas. Si recibe "Elefante" deberá imprimir "etnafelE"
 
-/*
 const reverse = word => {
     let newWord = '';
     for (let index = 0; index <= word.length; index++) {
@@ -222,9 +203,7 @@ const reverse = word => {
 }
 
 console.log(reverse('Elefante'))
-*/
-
-
+console.log('--------------------')
 
 
 // - Crea una función que reciba un número entero e imprima un lista de números impares como ésta:
@@ -245,19 +224,25 @@ const oddNumbers = number => {
 }
 
 oddNumbers(6)
+console.log('--------------------')
 
-// const oddNumbersRev = number => {
-//     let newString = '';
-//     let newStringRev = ''
-//     for (let index = 1; index <= number; index++) {
-//         newString += (index * 2) - 1 + ' ';
-//         console.log(newStringRev);
-//     } return newString;
-// }
+const oddNumbersReverse = number => {
+    let prevString = '';
+    let newString = '';
+    for (let index = 1; index <= number; index++) {
+        newString = (index * 2) - 1 + ' ';
+        console.log(newString + prevString);
+        prevString = newString + prevString;
+    }
+}
 
-// oddNumbersRev(6)
+oddNumbersReverse(6)
 
-const adrian = number => {
+/*
+
+Función OddNumbers de Dorian:
+
+const dorian = number => {
     let newString = '';
     for (let index = 1; index <= number * 2; index += 2) {
         newString += index + ' ';
@@ -265,14 +250,19 @@ const adrian = number => {
     }
 }
 
-adrian(6)
+dorian(6)
 
-const adrianRev = number => {
+
+Función OddNumbersReverse basada en la función OddNumbers de Dorian:
+
+const dorianRev = number => {
+    let prevString = ''
     let newString = '';
     for (let index = 1; index <= number * 2; index += 2) {
-        newString += index + ' ';
-        console.log(newString);
+        newString = index + ' ';
+        console.log(newString + prevString);
+        prevString = newString + prevString;
     }
 }
 
-adrianRev(6)
+dorianRev(6) */
