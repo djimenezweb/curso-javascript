@@ -1,0 +1,17 @@
+body {
+    min-height: 1000vh;
+}
+
+.title {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.scroll-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background-color: green;
+}
