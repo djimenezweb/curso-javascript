@@ -1,19 +1,25 @@
-/* const fetchData = url => fetch(url);
+// IMPORTANTE: Hay que deshabilitar la caché del navegador
+// Firefox: Inspeccionar > Network > Disable Cache
 
-const request = fetchData('https://jsonplaceholder.typicode.com/posts');
+const adviceNumber = document.getElementById('advice-number');
+const adviceText = document.getElementById('advice-text');
+const diceIcon = document.getElementById('dice-icon');
 
-request
-  .then(response => response.json())
-  .then(data => {
-    const fragment = document.createDocumentFragment();
-    data.forEach(item => {
-      const h2 = document.createElement('h2');
-      const p = document.createElement('p');
-      h2.textContent = item.title;
-      p.textContent = item.title;
-      fragment.append(h2);
-      fragment.append(p);
+const fetchData = url => fetch(url);
+
+const getAdvice = () => {
+  const request = fetchData('https://api.adviceslip.com/advice');
+
+  request
+    .then(response => response.json())
+    .then(data => {
+      adviceNumber.textContent = data.slip.id;
+      adviceText.textContent = data.slip.advice;
     });
-    document.body.append(fragment);
-  });
- */
+};
+
+getAdvice();
+
+diceIcon.addEventListener('click', getAdvice);
+
+// Entre 1 y 224
