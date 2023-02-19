@@ -1,0 +1,78 @@
+:root {
+  --offset: 150px;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  padding: 30vh 15vw;
+}
+
+.section1 {
+  background: #9edc4c;
+  padding-top: 10em;
+}
+.section2 {
+  background: #4dcb5f;
+}
+.section3 {
+  background: #00b774;
+}
+.section4 {
+  background: #00a187;
+}
+.section5 {
+  background: #008a94;
+}
+
+.inverse {
+  color: white;
+  background: #333;
+}
+
+.overlay {
+  display: grid;
+  grid:
+    'top top top' var(--offset)
+    'side1 middle side2' calc(100vh - calc(var(--offset) * 2))
+    'bottom bottom bottom' var(--offset)
+    / 1fr 6fr 1fr;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.top,
+.side1,
+.side2,
+.bottom {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.top {
+  grid-area: top;
+}
+
+.side1 {
+  grid-area: side1;
+}
+
+.side2 {
+  grid-area: side2;
+}
+
+.bottom {
+  grid-area: bottom;
+}
+
+.viewport {
+  grid-area: middle;
+  border: 6px dashed black;
+}
